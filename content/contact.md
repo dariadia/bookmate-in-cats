@@ -6,6 +6,8 @@ aliases: ["contact"]
 author: "Hugo Authors"
 ---
 
+{{< rawhtml >}}
+
 <div class="content">
     <p class="mb-2">To contact us, please fill out the form below.</p>
     <form name=contact action="https://getform.io/f/4bc32c7d-2c91-4c4d-bacf-a8c1bccf1de9" method=post>
@@ -24,3 +26,4 @@ author: "Hugo Authors"
     <input type=submit value="Submit" class="w-full button duration-100 py-2 bg-gray-800 text-white cursor-pointer transition-colors hover:bg-gray-600">
     </form>
 </div>
+{{< /rawhtml >}}
