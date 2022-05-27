@@ -1,0 +1,10 @@
+baseURL = ""
+disableKinds = ["page", "section", "taxonomy", "term"]
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.75.0"
+
+[build]
+writeStats = true
