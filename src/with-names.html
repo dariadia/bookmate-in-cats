@@ -6,7 +6,7 @@
     <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body class="bg-indigo-lightest font-sans">
-  <section id="gallery" class="flex flex-wrap -mx-2">
+  <section id="gallery" class="grid grid-cols-3 gap-4 justify-items-center">
   </section>
   <script>
     const appendData = (data) => {
@@ -14,7 +14,7 @@
       for (let person in data) {
         let article = document.createElement("article");
         article.innerHTML = `
-        <article class="mt-5 px-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/3 card bg-red shadow-md rounded bg-white">
+        <article class="mt-5 px-2 w-full md:w-1/2 card shadow-md rounded bg-white">
           <img src="${data[person]}" alt="${person}" class="rounded-t w-full">
         </article>`
         mainContainer.appendChild(article);
@@ -24,10 +24,10 @@
     const DATA = {
       'Кристина Ятковская': 'https://i.ibb.co/w7tsbS1/58-E307-E1-778-A-4504-B9-FF-978816531-FA2.jpg',
       'Серёжа Казаков': 'https://i.ibb.co/m8G1TmB/03-FFC76-E-281-A-4684-966-A-463-E7-B11-DF6-E.jpg',
+      'Вова Панкратов': 'https://i.ibb.co/B2JrBks/3007-A65-B-8434-4-BDF-B10-A-B98-D6647-C367.jpg',
       'Сауле Казанбаева': 'https://i.ibb.co/RDn539B/4393-DFC9-53-AD-4674-A982-C80700-C33830.jpg',
       'Даша Дьячкова':'https://i.ibb.co/3F6T5zz/7-A66-F320-85-A8-467-C-9-C0-A-23-BE618-A30-B3.png',
       'Вася Колесников':'https://i.ibb.co/9YPpNyy/22073072-D85-C-4-BB4-9-E66-756-A7687-AF51.png',
-      'Вова Панкратов': 'https://i.ibb.co/B2JrBks/3007-A65-B-8434-4-BDF-B10-A-B98-D6647-C367.jpg',
       'Вова Ерёмин': 'https://i.ibb.co/phyF5Pg/2022-FCFB-8-A73-445-E-92-E1-B9-BD445-B1-DDE.jpg',
     }
 
