@@ -4,6 +4,5 @@ Tailwind-based gallery of my colleagues imagined as cats (by me)
 ### Start
 
 ```
-npm i
-npm run start
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
