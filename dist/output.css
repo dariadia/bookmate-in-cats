@@ -468,12 +468,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-12 {
   margin: 3rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .-mx-2 {
@@ -493,12 +503,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
-.w-full {
-  width: 100%;
+.min-h-\[400px\] {
+  min-height: 400px;
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.w-full {
+  width: 100%;
 }
 
 .grid-cols-3 {
@@ -511,6 +521,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .gap-4 {
@@ -579,6 +593,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+body {
+  background: rgb(215,221,232);
+  background: radial-gradient(circle, rgba(215,221,232,1) 12%, rgba(117,127,154,1) 81%);
 }
 
 @media (min-width: 768px) {
