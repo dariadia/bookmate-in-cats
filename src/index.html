@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmate in Cats</title>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-indigo-lightest font-sans m-12">
+  <section id="gallery" class="grid grid-cols-3 gap-4 justify-items-center">
+  </section>
+  <script>
+    const appendData = (data) => {
+      let mainContainer = document.getElementById("gallery");
+      for (let person in data) {
+        let article = document.createElement("article");
+        article.classList.add("min-h-[400px]"); 
+        article.innerHTML = `
+        <details class="my-5 px-2 w-full md:w-1/2 card shadow-md rounded bg-white m-auto">
+          <summary>
+            <img src="${data[person]}" alt="${person}" class="rounded-t w-full my-2">
+          </summary>
+          <footer class="border-t border-gray-300 uppercase p-5 flex justify-between">
+            <span class="text-gray-600 text-xs font-bold self-center">${person}</span>
+          </footer>
+        </details>`
+        mainContainer.appendChild(article);
+      }
+    }
+
+    const DATA = {
+      'Кристина Ятковская': 'https://i.ibb.co/Yt1b1Xk/37-C5-DDE1-4239-41-E8-A56-F-ADFF1-A622795.jpg',
+      'Серёжа Казаков': 'https://i.ibb.co/2y3JFpw/7-AA5-E36-D-07-BC-414-F-827-F-3-E2-B2-A9-CFAAB.jpg',
+      'Вова Панкратов': 'https://i.ibb.co/3vJKrjK/7-B707-BCB-BDDE-4-C97-A633-4-EE6-E1-AFD96-C.jpg',
+      'Вова Ерёмин': 'https://i.ibb.co/CPprK1G/BCA62-B02-2-C0-D-4-B5-E-B326-93-B33328-D24-D.jpg',
+      'Сауле Казанбаева': 'https://i.ibb.co/xqXP2bK/5-A1-EB91-A-B238-4-D22-ABF9-0-A9-D75-DEE47-D.jpg',
+      'Даша Дьячкова':'https://i.ibb.co/mcbcZKL/C304-EE15-0-B8-D-4-C84-A971-6-FC29663-DE66.jpg',
+      'Вася Колесников':'https://i.ibb.co/BsF1wnk/567-A10-B8-4-F40-459-C-8451-D8529-F2-CAF93.jpg',
+    }
+
+    appendData(DATA)
+</script>
+</body>
+</html>
