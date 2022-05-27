@@ -1,17 +1,7 @@
 module.exports = {
-  content: ["./**/*.html", "./**/*.md", "config.toml"],
-  darkMode: "class",
+  content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {
-      colors: {
-        warmgray: {
-          700: "#2f3335",
-          800: "#1e2022",
-          900: "#181a1b",
-        },
-      },
-    },
+    extend: {},
   },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
-};
+  plugins: [],
+}
