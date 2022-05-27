@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Bookmate in Cats</title>
     <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body class="bg-indigo-lightest font-sans">
-  <section class="flex flex-wrap -mx-2">
-    <article class="mt-5 px-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/3">
-      <div class="card bg-red shadow-md rounded bg-white">
-        <details>
-          <summary>
-            <img :src="`/images/${image}`" :alt="title" class="rounded-t w-full">
-          </summary>
-          <footer class="border-t border-gray-300 uppercase p-5 flex justify-between">
-            <span class="text-gray-600 text-xs font-bold self-center" v-text="category"></span>
-            <a href="#" class="text-gray-600 hover:text-blue-600">
-                <i v-if="price" class="fa fa-user"></i>
-            </a>
-          </footer>
-        </details>
-      </div>
-    </article>
-    <article class="mt-5 px-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/3">
-      <div class="card bg-red shadow-md rounded bg-white">
-        <details>
-          <summary>
-            <img :src="`/images/${image}`" :alt="title" class="rounded-t w-full">
-          </summary>
-          <footer class="border-t border-gray-300 uppercase p-5 flex justify-between">
-            <span class="text-gray-600 text-xs font-bold self-center" v-text="category"></span>
-            <a href="#" class="text-gray-600 hover:text-blue-600">
-                <i v-if="price" class="fa fa-user"></i>
-            </a>
-          </footer>
-        </details>
-      </div>
-    </article>
+  <section id="gallery" class="flex flex-wrap -mx-2">
   </section>
+  <script>
+    const appendData = (data) => {
+      let mainContainer = document.getElementById("gallery");
+      for (let person in data) {
+        let article = document.createElement("article");
+        article.innerHTML = `
+        <article class="mt-5 px-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/3">
+      <div class="card bg-red shadow-md rounded bg-white">
+        <details>
+          <summary>
+            <img :src="${data[person]}" :alt="title" class="rounded-t w-full">
+          </summary>
+          <footer class="border-t border-gray-300 uppercase p-5 flex justify-between">
+            <span class="text-gray-600 text-xs font-bold self-center">${person}</span>
+          </footer>
+        </details>
+      </div>
+    </article>`
+        mainContainer.appendChild(article);
+      }
+    }
+
+    const DATA = {
+      'Кристина Ятковская': 'img.png'
+    }
+
+    appendData(DATA)
+</script>
 </body>
 </html>
