@@ -1,3 +1,78 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://example.com"
+title = "Bookmate Team as Cats"
+author = "dariadia"
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+enableRobotsTXT = true
+
+[params]
+base_color = "bg-gray-800"
+
+paginator_pages = 20
+archive_dropdown = "false"
+tagsLimit = 20
+darkmode = "dark"
+
+  [params.post]
+    thumbnail = true
+    noimage = true
+    thumbnail_height = "lg:h-44"
+    thumbnail_width = "lg:w-auto"
+    description = "130"
+
+  [params.widgets]
+    display = true
+    widgets = ["search", "archive", "category", "tags", "recent"]
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+archive = "archives"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
