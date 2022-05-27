@@ -5,8 +5,8 @@
     <title>Bookmate in Cats</title>
     <link href="../dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-indigo-lightest font-sans">
-  <section id="gallery" class="flex flex-wrap -mx-2">
+<body class="bg-indigo-lightest font-sans m-12">
+  <section id="gallery" class="grid grid-cols-3 gap-4">
   </section>
   <script>
     const appendData = (data) => {
@@ -14,8 +14,7 @@
       for (let person in data) {
         let article = document.createElement("article");
         article.innerHTML = `
-        <article class="mt-5 px-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/3">
-      <div class="card bg-red shadow-md rounded bg-white">
+      <div class="mt-5 px-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/3 card shadow-md rounded bg-white">
         <details>
           <summary>
             <img src="${data[person]}" alt="${person}" class="rounded-t w-full">
@@ -24,8 +23,7 @@
             <span class="text-gray-600 text-xs font-bold self-center">${person}</span>
           </footer>
         </details>
-      </div>
-    </article>`
+      </div>`
         mainContainer.appendChild(article);
       }
     }
