@@ -9,6 +9,5 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 ### Deployed
 
-- [Main App](https://bookmate-in-cats.vercel.app/)
-- [Names index](https://bookmate-in-cats.vercel.app/with-names.html)
+- [App](https://bookmate-in-cats.vercel.app/)
 
