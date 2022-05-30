@@ -37,9 +37,9 @@
     const appendData = (data) => {
       let mainContainer = document.getElementById("gallery");
       for (let person in data) {
-        let article = document.createElement("article");
-        article.classList.add("min-h-[400px]"); 
-        article.innerHTML = `
+        let card = document.createElement("div");
+        card.classList.add("min-h-[400px]"); 
+        card.innerHTML = `
         <details class="my-5 px-2 w-full md:w-1/2 card shadow-md rounded bg-white m-auto">
           <summary>
             <img src="${data[person]}" alt="${person}" class="rounded-t w-full my-2">
@@ -48,7 +48,7 @@
             <span class="text-gray-600 text-xs font-bold self-center">${person}</span>
           </footer>
         </details>`
-        mainContainer.appendChild(article);
+        mainContainer.appendChild(card);
       }
     }
 
