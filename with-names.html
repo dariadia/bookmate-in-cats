@@ -37,7 +37,7 @@
     const appendData = (data) => {
       let mainContainer = document.getElementById("gallery");
       for (let person in data) {
-        let card = document.createElement("card");
+        let card = document.createElement("div");
         card.classList.add("mt-5,px-2,w-full,md:w-1/2,card,shadow-md,rounded,bg-white"); 
         card.innerHTML = `
           <img src="${data[person]}" alt="${person}" class="rounded-t w-full">`
